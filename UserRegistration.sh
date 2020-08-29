@@ -78,3 +78,15 @@ then
 else
 	echo "Password in invalid";
 fi
+
+# UseCase 7 => Password Rule3
+
+read -p "Enter password with at least 1 numeric value:" password
+pat="^[A-Z][a-z]{6}[a-z]+[0-9]{1}"
+
+if [[ $password =~ $pat ]]
+then
+	echo "Password is valid";
+else
+	echo "Password is invalid";
+fi
