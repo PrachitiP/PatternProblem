@@ -16,3 +16,17 @@ then
 else
         echo "First Name is not valid"
 fi
+
+#UseCase 2=> Check Last Name is valid or not
+
+pat="^[[:upper:]]{1}[[:lower:]]{2,8}$";
+
+#user input
+read -p "Enter Last Name:" lname
+
+if [[ $lname =~ $pat ]]
+then
+        echo "Last Name is valid"
+else
+        echo "Last Name is not valid"
+fi
