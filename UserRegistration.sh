@@ -66,3 +66,15 @@ then
 else
 	echo "Password is invalid";
 fi
+
+# UseCase 6 => Password Rule2
+	
+read -p "Enter password in Case:" password
+pat="^[[:upper:]]{1}[[:lower:]]{7}"
+
+if [[ $password =~ $pat ]]
+then
+	echo "Password is valid";
+else
+	echo "Password in invalid";
+fi
