@@ -30,3 +30,16 @@ then
 else
         echo "Last Name is not valid"
 fi
+
+
+# UseCase 3 => Email Validation
+
+read -p "Enter email address to validate:" email
+pattern="^[a-zA-Z]{5}[a-zA-Z0-9\.\!\_]*\@[a-z]*\.(co|in|com)$"
+
+if [[ $email =~ $pattern ]]
+then
+	echo "Email is valid";
+else
+	echo "Email is not valid";
+fi
