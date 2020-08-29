@@ -54,3 +54,15 @@ then
 else
 	echo "Mobile number is not valid";
 fi
+
+# UseCase 5 => Password Rule1
+
+read -p "Enter password minimum 8 characters:" password
+pat="^[a-zA-Z]{8}"
+
+if [[ $password =~ $pat ]]
+then
+	echo "Password is valid";
+else
+	echo "Password is invalid";
+fi
