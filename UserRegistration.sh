@@ -90,3 +90,15 @@ then
 else
 	echo "Password is invalid";
 fi
+
+# UseCase 8 => Password Rule4
+
+read -p "Enter pass with special character:" password
+pat="^[A-Z][a-z]{6}[a-z]+[0-9][\~\`\!\@\#\$\%\^\&\*\(\)\-\_\+\;\:\"\'\,\<\>\.\/\?]{1}"
+
+if [[ $password =~ $pat ]]
+then
+	echo "Password is valid";
+else
+	echo "Password is invalid";
+fi
